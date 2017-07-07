@@ -17,11 +17,16 @@
 .App-intro {
   font-size: large;
 }
-.icon-menu a{
-  text-decoration: none;
-  color: white;
-}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+span{
+  font-size: 50px;
+  color: #FFF;
+  background-color: #2ECC71;
+  border-radius: 50%;
+  padding: 10px;
 }

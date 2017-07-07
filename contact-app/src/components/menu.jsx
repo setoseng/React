@@ -20,10 +20,10 @@ const IconMenuExampleSimple = () => (
     >
       <div>
         <MenuItem>
-          <Link to="/" class="icon-menu">Home</Link>
+          <Link to="/" className="icon-menu">Home</Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/form" class="icon-menu">Form</Link>
+          <Link to="/form" className="icon-menu">Add Contact</Link>
         </MenuItem>
       </div>
     </IconMenu>

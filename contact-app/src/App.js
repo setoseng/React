@@ -9,6 +9,7 @@ import AppBar from 'material-ui/AppBar';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import MyForm from './components/myform';
+import {auth} from './fsociety.js'
 
 const Home = () => (<h2>Home</h2>)
 const NoMatch = ({ location }) => (
@@ -22,6 +23,17 @@ const theme = getMuiTheme({
 });
 
 class App extends Component {
+
+  login () {
+  auth()
+    .then(function (user) {
+      console.log(user);
+    })
+    .catch(function (e) {
+      console.log(e);
+    });
+  }
+
   render() {
     return (
       <div>
@@ -29,6 +41,9 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <AppBar title="Contact App" iconElementLeft={<MenuExampleSimple/>}/>
+              <div>
+                <button onClick={(e) => this.login(e)}>Login</button>
+              </div>
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/form" component={MyForm}/>
